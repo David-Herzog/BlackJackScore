@@ -7,11 +7,12 @@ namespace BlackjackCount
         private int scoreTab2 = 0;
         private int[] cardArray= new int[13];
         private Boolean arrayIsInitialized = false;
+        private int decksInUse = 3;
 
         public Form1()
         {
             InitializeComponent();
-            initArray();
+            init();
         }
 
         
@@ -21,13 +22,26 @@ namespace BlackjackCount
             {
                 for (int i = 0; i < cardArray.Length; i++) 
                 {
-                    cardArray[i] = 12;
+                    cardArray[i] = decksInUse * 4;
                 }  
                 arrayIsInitialized = true;
             }
         }
 
-       
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (comboBox1.SelectedIndex)
+            {
+                case 0: decksInUse = 1; return;
+                case 1: decksInUse = 2; return;
+                case 2: decksInUse = 3; return;
+                case 3: decksInUse = 4; return;
+                case 4: decksInUse = 5; return;
+                case 5: decksInUse = 6; return;
+            }
+            init();
+        }
+
 
         public int accessArray(string card)
         {
@@ -84,6 +98,26 @@ namespace BlackjackCount
             else scoreTab2--;
         }
 
+        public void init()
+        {
+            arrayIsInitialized = false;
+            scoreTab2 = 0;
+            initArray();
+            label4.Text = giveScoreTab2();
+            label5.Text = "Cards: " + accessArray("2");
+            label6.Text = "Cards: " + accessArray("3");
+            label7.Text = "Cards: " + accessArray("4");
+            label8.Text = "Cards: " + accessArray("5");
+            label9.Text = "Cards: " + accessArray("6");
+            label10.Text = "Cards: " + accessArray("7");
+            label11.Text = "Cards: " + accessArray("8");
+            label12.Text = "Cards: " + accessArray("9");
+            label13.Text = "Cards: " + accessArray("10");
+            label14.Text = "Cards: " + accessArray("J");
+            label15.Text = "Cards: " + accessArray("Q");
+            label16.Text = "Cards: " + accessArray("K");
+            label17.Text = "Cards: " + accessArray("A");
+        }
       
 
         /**
@@ -116,18 +150,21 @@ namespace BlackjackCount
         {
             manipulateArray("2");
             manipulateScoreTab2(1);
-            label5.Text = accessArray("2").ToString();
-            label4.Text = giveScoreTab2();
+            label5.Text = "Cards: " + accessArray("2");
+            label4.Text = giveScoreTab2();          
 
-            
+        }
 
+        private void button17_Click(object sender, EventArgs e)
+        {
+            init();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             manipulateArray("3");
             manipulateScoreTab2(1);
-            label6.Text = accessArray("3").ToString();
+            label6.Text = "Cards: " + accessArray("3");
             label4.Text = giveScoreTab2();
         }
 
@@ -135,7 +172,7 @@ namespace BlackjackCount
         {
             manipulateArray("4");
             manipulateScoreTab2(1);
-            label7.Text = accessArray("4").ToString();
+            label7.Text = "Cards: " + accessArray("4");
             label4.Text = giveScoreTab2();
 
         }
@@ -144,7 +181,7 @@ namespace BlackjackCount
         {
             manipulateArray("5");
             manipulateScoreTab2(1);
-            label8.Text = accessArray("5").ToString();
+            label8.Text = "Cards: " + accessArray("5");
             label4.Text = giveScoreTab2();
         }
 
@@ -152,28 +189,28 @@ namespace BlackjackCount
         {
             manipulateArray("6");
             manipulateScoreTab2(1);
-            label9.Text = accessArray("6").ToString();
+            label9.Text = "Cards: " + accessArray("6");
             label4.Text = giveScoreTab2();
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             manipulateArray("7");
-            label10.Text = accessArray("7").ToString();
+            label10.Text = "Cards: " + accessArray("7");
             label4.Text = giveScoreTab2();
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             manipulateArray("8");
-            label11.Text = accessArray("8").ToString();
+            label11.Text = "Cards: " + accessArray("8");
             label4.Text = giveScoreTab2();
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
             manipulateArray("9");
-            label12.Text = accessArray("9").ToString();
+            label12.Text = "Cards: " + accessArray("9");
             label4.Text = giveScoreTab2();
         }
 
@@ -181,7 +218,7 @@ namespace BlackjackCount
         {
             manipulateArray("10");
             manipulateScoreTab2(2);
-            label13.Text = accessArray("10").ToString();
+            label13.Text = "Cards: " + accessArray("10");
             label4.Text = giveScoreTab2();
         }
 
@@ -189,7 +226,7 @@ namespace BlackjackCount
         {
             manipulateArray("J");
             manipulateScoreTab2(2);
-            label14.Text = accessArray("J").ToString();
+            label14.Text = "Cards: " + accessArray("J");
             label4.Text = giveScoreTab2();
         }
 
@@ -197,7 +234,7 @@ namespace BlackjackCount
         {
             manipulateArray("Q");
             manipulateScoreTab2(2);
-            label15.Text = accessArray("Q").ToString();
+            label15.Text = "Cards: " + accessArray("Q");
             label4.Text = giveScoreTab2();
         }
 
@@ -205,7 +242,7 @@ namespace BlackjackCount
         {
             manipulateArray("K");
             manipulateScoreTab2(2);
-            label16.Text = accessArray("K").ToString();
+            label16.Text = "Cards: " + accessArray("K");
             label4.Text = giveScoreTab2();
         }
 
@@ -213,7 +250,7 @@ namespace BlackjackCount
         {
             manipulateArray("A");
             manipulateScoreTab2(2);
-            label17.Text = accessArray("A").ToString();
+            label17.Text = "Cards: " + accessArray("A");
             label4.Text = giveScoreTab2();
         }
 
@@ -240,5 +277,42 @@ namespace BlackjackCount
         {
 
         }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }
