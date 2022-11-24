@@ -1,0 +1,17 @@
+D:\Dev\BlackjackCount\obj\Debug\net6.0-windows\BlackjackCount.csproj.AssemblyReference.cache
+D:\Dev\BlackjackCount\obj\Debug\net6.0-windows\BlackjackCount.Form1.resources
+D:\Dev\BlackjackCount\obj\Debug\net6.0-windows\BlackjackCount.csproj.GenerateResource.cache
+D:\Dev\BlackjackCount\obj\Debug\net6.0-windows\BlackjackCount.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\BlackjackCount\obj\Debug\net6.0-windows\BlackjackCount.AssemblyInfoInputs.cache
+D:\Dev\BlackjackCount\obj\Debug\net6.0-windows\BlackjackCount.AssemblyInfo.cs
+D:\Dev\BlackjackCount\obj\Debug\net6.0-windows\BlackjackCount.csproj.CoreCompileInputs.cache
+D:\Dev\BlackjackCount\bin\Debug\net6.0-windows\BlackjackCount.exe
+D:\Dev\BlackjackCount\bin\Debug\net6.0-windows\BlackjackCount.deps.json
+D:\Dev\BlackjackCount\bin\Debug\net6.0-windows\BlackjackCount.runtimeconfig.json
+D:\Dev\BlackjackCount\bin\Debug\net6.0-windows\BlackjackCount.dll
+D:\Dev\BlackjackCount\bin\Debug\net6.0-windows\BlackjackCount.pdb
+D:\Dev\BlackjackCount\obj\Debug\net6.0-windows\BlackjackCount.dll
+D:\Dev\BlackjackCount\obj\Debug\net6.0-windows\refint\BlackjackCount.dll
+D:\Dev\BlackjackCount\obj\Debug\net6.0-windows\BlackjackCount.pdb
+D:\Dev\BlackjackCount\obj\Debug\net6.0-windows\BlackjackCount.genruntimeconfig.cache
+D:\Dev\BlackjackCount\obj\Debug\net6.0-windows\ref\BlackjackCount.dll
