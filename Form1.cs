@@ -2,8 +2,9 @@ namespace BlackjackCount
 {
     public partial class Form1 : Form
     {
+        // Tab 1
         private int scoreTab1 = 0;
-
+        // Tab2
         private int scoreTab2 = 0;
         private int[] cardArray= new int[13];
         private Boolean arrayIsInitialized = false;
@@ -117,6 +118,8 @@ namespace BlackjackCount
             label15.Text = "Cards: " + accessArray("Q");
             label16.Text = "Cards: " + accessArray("K");
             label17.Text = "Cards: " + accessArray("A");
+            label1.BringToFront();
+            label2.BringToFront();
         }
       
 
@@ -124,23 +127,41 @@ namespace BlackjackCount
          * Tab 1 -> Classic
          */
 
+        public void manipulatePictureBoxTab1() 
+        {
+        
+                if (scoreTab1 < -4) pictureBox1.Image = Properties.Resources.score0;
+                else if (scoreTab1 > 4) pictureBox1.Image = Properties.Resources.score2;
+                else pictureBox1.Image = Properties.Resources.score1;
+
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             scoreTab1++;
             label1.Text = giveScoreTab1();
+            manipulatePictureBoxTab1();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             label1.Text = giveScoreTab1();
+            manipulatePictureBoxTab1();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             scoreTab1--;
             label1.Text = giveScoreTab1();
+            manipulatePictureBoxTab1();
         }
 
+        private void button18_Click(object sender, EventArgs e)
+        {
+            scoreTab1 = 0;
+            label1.Text = giveScoreTab1();
+            manipulatePictureBoxTab1();
+        }
 
         /**
          * Tab 2 -> Advanced
@@ -263,54 +284,6 @@ namespace BlackjackCount
         private string giveScoreTab2()
         {
             return scoreTab2 > 0 ? "+" + scoreTab2 : scoreTab2.ToString();
-        }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tabPage2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label17_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
 
        
