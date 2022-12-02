@@ -1,7 +1,51 @@
+using System.Windows.Forms;
+
 namespace BlackjackCount
 {
     public partial class Form1 : Form
     {
+
+
+
+        public Form1() : base()
+        {
+
+            InitializeComponent();
+            init();
+            // Set KeyPreview object to true to allow the form to process 
+            // the key before the control with focus processes it.
+            this.KeyPreview = true;
+
+           
+
+            // Associate the event-handling method with the
+            // KeyDown event.
+            this.KeyDown += new KeyEventHandler(Form1_KeyDown);
+        }
+
+        // The form will handle all key events before the control with  
+        // focus handles them.  Show the keys pressed by adding the
+        // KeyCode object to ListBox1. Ensure the processing is passed
+        // to the control with focus by setting the KeyEventArg.Handled
+        // property to false.
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+           if (e.KeyCode == Keys.Down) 
+            {
+                button1.PerformClick();
+            }
+           else if (e.KeyCode == Keys.Up)
+            {
+                button3.PerformClick(); 
+            }
+        }
+
+
+
+
+
+
+
         // Tab 1
         private int scoreTab1 = 0;
         // Tab2
@@ -10,11 +54,7 @@ namespace BlackjackCount
         private Boolean arrayIsInitialized = false;
         private int decksInUse = 3;
 
-        public Form1()
-        {
-            InitializeComponent();
-            init();
-        }
+  
 
         
         public void initArray() 

@@ -145,7 +145,7 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.DarkGray;
+            this.tabPage1.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.button18);
             this.tabPage1.Controls.Add(this.button1);
@@ -186,7 +186,7 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.DarkGray;
+            this.tabPage2.BackColor = System.Drawing.Color.DarkOliveGreen;
             this.tabPage2.Controls.Add(this.comboBox1);
             this.tabPage2.Controls.Add(this.button17);
             this.tabPage2.Controls.Add(this.label17);
